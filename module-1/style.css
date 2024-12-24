@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    font-size: 2.5vh;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.display {
+    background-color: #333;
+    color: #fff;
+    font-family: "Work Sans", serif;
+    font-size: 5vh;
+    text-align: right;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 40px;
+    width: 100%;
+    max-width: 320px;
+    word-wrap: break-word;
+}
+
+.orange {
+    background-color: orange;
+    font-size: 2em;
+}
+
+.button:active {
+    background-color: #777;
+}
+
+.button.orange {
+    background-color: #f39c12;
+}
+
+.button.orange:active {
+    background-color: #d87d0a;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 3vh;
+    }
+
+    .button {
+        height: 8vh;
+        width: 8vh;
+        font-size: 2vh;
+    }
+
+    .display {
+        font-size: 2.5vh;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        height: 7vh;
+        width: 7vh;
+        font-size: 1.8vh;
+    }
+
+    .display {
+        font-size: 2vh;
+        padding: 6px;
+    }
+}
